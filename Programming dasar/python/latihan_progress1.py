@@ -1,104 +1,104 @@
 
-# # Soal 1 Fungsi Matematika
-# # buat sebuah fungsi bernama hitung_luas_persegi_panjang
-# print("Program perhitungan luas persegi panjang")
-# def hitung_luas_persegi_panjang(panjang, lebar):
-#    return panjang * lebar
-# try:
-#    # input dari user
-#    panjang = float(input("Masukkan Panjang Persegi :"))
-#    lebar = float(input("Masukkan Lebar Persegi :"))
+# Soal 1 Fungsi Matematika
+# buat sebuah fungsi bernama hitung_luas_persegi_panjang
+print("Program perhitungan luas persegi panjang")
+def hitung_luas_persegi_panjang(panjang, lebar):
+   return panjang * lebar
+try:
+   # input dari user
+   panjang = float(input("Masukkan Panjang Persegi :"))
+   lebar = float(input("Masukkan Lebar Persegi :"))
 
-#    # panggil fungsi tanpa parameter
-#    # hasil_perhitungan = hitung_luas_persegi_panjang()
+   # panggil fungsi tanpa parameter
+   # hasil_perhitungan = hitung_luas_persegi_panjang()
 
-#    # panggil fungsi dengan parameter
-#    hasil_perhitungan = hitung_luas_persegi_panjang(panjang, lebar)
-#    print(f"Hasil Hitung Luas Persegi Panjang = {hasil_perhitungan}")
-# except ValueError:
-#    print("input yang anda masukkan salah")
+   # panggil fungsi dengan parameter
+   hasil_perhitungan = hitung_luas_persegi_panjang(panjang, lebar)
+   print(f"Hasil Hitung Luas Persegi Panjang = {hasil_perhitungan}")
+except ValueError:
+   print("input yang anda masukkan salah")
    
-# # soal 2 fungsi dengan logika kondisional
-# # buatlah fungsi cek_kelulusan dengan ketentuan jika nilai diatas 70 = lulus dan bila kurang dari 70 = tidak lulus
-# print("program cek status kelulusan")
-# # def cek_kelulusan(nilai):
-# #    return nilai
-
-# # try:
-# #    nilai = int(input("Masukkan Nilai Ujian anda : "))
-# #    if nilai > 70:
-# #       print("Selamat anda lulus ujian")
-# #    else:
-# #       print("Maaf anda tidak lulus")
-# # except ValueError:
-#    # print("input yang anda masukkan salah")
-
-# # perbaikan dari Ai
-# print("program cek status kelulusan")
-
-# #  1. pindahkan logika if/else ke dalam fungsi
+# soal 2 fungsi dengan logika kondisional
+# buatlah fungsi cek_kelulusan dengan ketentuan jika nilai diatas 70 = lulus dan bila kurang dari 70 = tidak lulus
+print("program cek status kelulusan")
 # def cek_kelulusan(nilai):
-#    if nilai > 70:
-#       return "selamat anda lulus ujian"
-#    else :
-#       return "maaf anda tidak lulus"
-# # 2. bagian utama program menjadi lebih bersih
+#    return nilai
+
 # try:
-#    nilai_input = int(input("masukkan nulai ujian anda :"))
-
-#    # 3. cukup panggil fungsinya dan simpan hasilnya
-#    status = cek_kelulusan(nilai_input)
-
-#    # 4. tampilkan hasil yang sudah di kembalikan fungsi
-#    print(status)
-
+#    nilai = int(input("Masukkan Nilai Ujian anda : "))
+#    if nilai > 70:
+#       print("Selamat anda lulus ujian")
+#    else:
+#       print("Maaf anda tidak lulus")
 # except ValueError:
-#    print("input yang anda masukan salah")
+   # print("input yang anda masukkan salah")
 
-# # Soal 3 fungsi memproses data dalam list
-# # buatlah fungsi cari_angka_terbesar dari list [3, 4, 9, 12, 5, 7, 1]
-# print("program mencari angka terbesar dalam list")
+# perbaikan dari Ai
+print("program cek status kelulusan")
 
-# # def cari_angka_terbesar(data_list):
-# #    nilai_terbesar = data_list[0]
-# #    for angka in data_list:
-# #       if angka > nilai_terbesar:
-# #          nilai_terbesar = angka
-# #    return nilai_terbesar
+#  1. pindahkan logika if/else ke dalam fungsi
+def cek_kelulusan(nilai):
+   if nilai > 70:
+      return "selamat anda lulus ujian"
+   else :
+      return "maaf anda tidak lulus"
+# 2. bagian utama program menjadi lebih bersih
+try:
+   nilai_input = int(input("masukkan nulai ujian anda :"))
 
-# # # data list
-# # angka_list = [3, 4, 9, 12, 5, 7, 1]
+   # 3. cukup panggil fungsinya dan simpan hasilnya
+   status = cek_kelulusan(nilai_input)
 
-# # # Panggil fungsi
-# # hasil = cari_angka_terbesar(angka_list)
-# # print(f"Nilai terbesar adalah: {hasil}")
+   # 4. tampilkan hasil yang sudah di kembalikan fungsi
+   print(status)
 
-# # perbaikan dari ai
+except ValueError:
+   print("input yang anda masukan salah")
+
+# Soal 3 fungsi memproses data dalam list
+# buatlah fungsi cari_angka_terbesar dari list [3, 4, 9, 12, 5, 7, 1]
+print("program mencari angka terbesar dalam list")
+
 # def cari_angka_terbesar(data_list):
-#    # penanganan jika list kosong, agar tidak error
-#    if not data_list:
-#       return None
-   
 #    nilai_terbesar = data_list[0]
-#    print(f"nilai awal : {nilai_terbesar}")
-
-#    # mulai loop dari element ke dua (index 1) sampai akhir
-#    for angka in data_list[1:]:
-#       print(f"-> sedang memeriksa angka : {angka}")
+#    for angka in data_list:
 #       if angka > nilai_terbesar:
 #          nilai_terbesar = angka
-#          print(f" ditemukan yang lebih besar! nilai terbesar di update menjadi : {nilai_terbesar}")
-#       else:
-#          print(f" {angka} tidak lebih besar dari {nilai_terbesar} lewat")
-
-#    print("-" * 20)
 #    return nilai_terbesar
+
 # # data list
 # angka_list = [3, 4, 9, 12, 5, 7, 1]
 
-# # pamggilan fungsi debug
+# # Panggil fungsi
 # hasil = cari_angka_terbesar(angka_list)
-# print(f"nilai terbesar adalah : {hasil}")
+# print(f"Nilai terbesar adalah: {hasil}")
+
+# perbaikan dari ai
+def cari_angka_terbesar(data_list):
+   # penanganan jika list kosong, agar tidak error
+   if not data_list:
+      return None
+   
+   nilai_terbesar = data_list[0]
+   print(f"nilai awal : {nilai_terbesar}")
+
+   # mulai loop dari element ke dua (index 1) sampai akhir
+   for angka in data_list[1:]:
+      print(f"-> sedang memeriksa angka : {angka}")
+      if angka > nilai_terbesar:
+         nilai_terbesar = angka
+         print(f" ditemukan yang lebih besar! nilai terbesar di update menjadi : {nilai_terbesar}")
+      else:
+         print(f" {angka} tidak lebih besar dari {nilai_terbesar} lewat")
+
+   print("-" * 20)
+   return nilai_terbesar
+# data list
+angka_list = [3, 4, 9, 12, 5, 7, 1]
+
+# pamggilan fungsi debug
+hasil = cari_angka_terbesar(angka_list)
+print(f"nilai terbesar adalah : {hasil}")
 
 
 # tugas akhir sistem manajemetn kontak sederhana
@@ -167,6 +167,59 @@ def hapus_kontak(daftar_kontak):
    if not ditemukan:
       print(f"Kontak dengan nama '{nama_dicari}' tidak ditemukan.")
 
+def update_kontak(daftar_kontak):
+   print("\n--- Update Kontak ---")
+   if not daftar_kontak:
+      print("Daftar kontak masih kosong.")
+      return
+
+   cari_nama = input("Masukkan nama kontak yang ingin diupdate: ")
+   ditemukan = False
+
+    # Kita butuh index untuk mengubah data di list aslinya
+   for index, kontak in enumerate(daftar_kontak):
+      if kontak['nama'].lower() == cari_nama.lower():
+         ditemukan = True
+         print(f"Kontak ditemukan: Nama: {kontak['nama']}, Telepon: {kontak['telepon']}")
+         
+         # --- Langkah 2: Tampilkan menu pilihan ---
+         print("\nApa yang ingin diupdate?")
+         print("1. Nama")
+         print("2. Telepon")
+         print("3. Keduanya")
+         pilihan_update = input("Masukkan pilihan (1/2/3): ")
+
+         # --- Langkah 3 & 4: Minta input dan lakukan perubahan ---
+         if pilihan_update == '1':
+               nama_baru = input("Masukkan nama baru: ")
+               # Ubah nama di kontak pada index yang ditemukan
+               daftar_kontak[index]['nama'] = nama_baru
+               print("Nama berhasil diupdate.")
+               
+         elif pilihan_update == '2':
+               telepon_baru = input("Masukkan nomor telepon baru: ")
+               # Ubah telepon di kontak pada index yang ditemukan
+               daftar_kontak[index]['telepon'] = telepon_baru
+               print("Nomor telepon berhasil diupdate.")
+               
+         elif pilihan_update == '3':
+               nama_baru = input("Masukkan nama baru: ")
+               telepon_baru = input("Masukkan nomor telepon baru: ")
+               # Ubah keduanya
+               daftar_kontak[index]['nama'] = nama_baru
+               daftar_kontak[index]['telepon'] = telepon_baru
+               print("Nama dan telepon berhasil diupdate.")
+               
+         else:
+               print("Pilihan tidak valid, update dibatalkan.")
+         
+         # --- Langkah 5: Keluar dari loop karena sudah selesai ---
+         break
+
+    # Pesan jika kontak tidak ditemukan dari awal
+   if not ditemukan:
+      print(f"Kontak dengan nama '{cari_nama}' tidak ditemukan.")
+
 def main():
    daftar_kontak = []
    
@@ -176,7 +229,8 @@ def main():
       print("2. lihat daftar kontak")
       print("3. cari kontak")
       print("4. hapus kontak")
-      print("5. keluar")
+      print("5. update kontak")
+      print("6. keluar")
 
       try:
          perintah = int(input("masukkan pilhan anda :"))
@@ -189,6 +243,8 @@ def main():
             cari_kontak(daftar_kontak)
          elif perintah == 4:
             hapus_kontak(daftar_kontak)
+         elif perintah == 5:
+            update_kontak(daftar_kontak)
          else:
             print("terimakasih sampai jumpa")
             break
