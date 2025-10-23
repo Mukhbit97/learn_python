@@ -37,3 +37,14 @@ kampus = {
    "mahasiswa2" : {"nama": "siti", "umur":23}
 }
 print(kampus["mahasiswa1"]["nama"])
+
+# Method .keys(), .values(), .items():
+# Anda sudah pakai .items() di loop. Tahu saja Anda bisa mendapatkan semua key atau semua value saja.
+mahasiswa = {"nama": "budi", "umur": 20}
+print(mahasiswa.keys())   # Output: dict_keys(['nama', 'umur'])
+print(mahasiswa.values()) # Output: dict_values(['budi', 20])
+
+# Dictionary Comprehension: Sama seperti list, tapi untuk dictionary.
+angka = [1, 2, 3, 4]
+kuadrat_dict = {a: a*a for a in angka}
+print(kuadrat_dict) # Output: {1: 1, 2: 4, 3: 9, 4: 16}
