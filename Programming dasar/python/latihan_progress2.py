@@ -30,24 +30,36 @@ def tambah_barang(inventory, kategori):
    try:
       sku = input("Masukkan sku barang : ")
       nama = input("Masukkan nama barang : ")
-      stok = input("masukkan stok barang : ")
-      harga = input("masukkan harga barang : ")
+      stok = int(input("masukkan stok barang : "))
+      harga = float(input("masukkan harga barang : "))
       kategory = input("masukkan kategori barang : ")
       kategori.add(kategory)
 
-      inventory[sku] = {"nama":[nama], "stok":[stok], "harga":[harga], "kategori":[kategori]}
-      print("\n data barang sudah tersimpan :")
+      inventory[sku] = {
+         "nama":nama, 
+         "stok":stok, 
+         "harga":harga, 
+         "kategori":kategory
+         }
+      print(f"\nBarang '{nama}' dengan SKU '{sku}' berhasil ditambahkan!")
       print(inventory)
    except ValueError:
-      print("data yang anda input salah")
+      print("\nError: Stok dan Harga harus berupa angka. Data tidak tersimpan.")
 
-def lihat_inventory(inventory, kategori):
+def lihat_inventory(inventory):
    print("\n --- Daftar Inventory ---")
    if not inventory:
       print("Maaf Data di Inventory Masih Kosong")
       return
    else:
-      print(inventory)
+      # print(inventory)
+      for i, (sku, detail) in enumerate(inventory.items(), 1):
+        print(f"{i}. SKU: {sku}")
+        print(f"   Nama: {detail['nama']}")
+        print(f"   Stok: {detail['stok']}")
+        print(f"   Harga: Rp {detail['harga']:,.2f}")
+        print(f"   Kategori: {detail['kategori']}")
+        print("-" * 25)
 
    # output masuh belum sesuai dengan yang di harapkan nanti di perbaiki
 
