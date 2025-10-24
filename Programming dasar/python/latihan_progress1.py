@@ -183,7 +183,7 @@ def update_kontak(daftar_kontak):
          print(f"Kontak ditemukan: Nama: {kontak['nama']}, Telepon: {kontak['telepon']}")
          
          # --- Langkah 2: Tampilkan menu pilihan ---
-         print("\nApa yang ingin diupdate?")
+         print("\n Apa yang ingin diupdate?")
          print("1. Nama")
          print("2. Telepon")
          print("3. Keduanya")
